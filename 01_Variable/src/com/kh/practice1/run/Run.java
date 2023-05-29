@@ -7,6 +7,8 @@ import com.kh.practice1.func.VariablePractice4;
 
 public class Run {
 	public static void main(String[] args) {
+		
+		// 클래스 호출 : 클래스명 별칭 = new 클래스명 
 		VariablePractice1 a = new VariablePractice1();
 		
 		a.practice1();
