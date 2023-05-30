@@ -245,6 +245,7 @@ public class A_If {
 		} else {
 			System.out.println("차은우님이 아니신가보네요...");
 		}
+		
 	}
 	
 	public void method7() {
