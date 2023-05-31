@@ -292,7 +292,56 @@ public class ControlPractice {
 	public void practice10() {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.printf("실행 할 기능을 선택 하세요 : ");
+		
+		System.out.println("실행 할 기능을 선택하세요.");
+		System.out.println("1. 메뉴 출력");
+		System.out.println("2. 짝수 홀수");
+		System.out.println("3. 합격 / 불합격");
+		System.out.println("4. 계절");
+		System.out.println("5. 로그인");
+		System.out.println("6. 권한 확인");
+		System.out.println("7.BMI");
+		System.out.println("8. 계산기");
+		System.out.println("9. P / F");
+		
+		System.out.print("선택 : ");
+		int num = sc.nextInt();
+		
+		String str = " ";
+		
+		switch(num) {
+		case 1:
+			str = str + num;
+			break;
+			
+		case 2:
+			str = str + num;
+			break;
+		case 3 :
+			str = str + num;
+			break;
+		case 4 :
+			str = str + num;
+			break;
+		case 5 :
+			str = str + num;
+			break;
+		case 6 :
+			str = str + num;
+			break;
+		case 7 :
+			str = str + num;
+			break;
+		case 8:
+			str = str + num;
+			break;
+		case 9 :
+			str = str + num;
+			break;
+			
+		}
+		
+		System.out.printf("(실습문제%s 실행)", num);
 		
 		
 	}

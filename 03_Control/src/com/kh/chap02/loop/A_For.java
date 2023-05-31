@@ -172,6 +172,30 @@ public class A_For {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		while(true) { // 조건식에 true 입력하면 무한으로 조건문 돌아감
+			
+			System.out.print("1 이상의 정수 하나를 입력하세요 : ");
+			int num = sc.nextInt();
+			
+			if(num > 0) {
+				// 누적합
+				// 1. sum 변수 만들기
+				int sum = 0;
+				// 2. for문 돌리기
+				for(int i = 1; i <= num; i++) {
+					sum += i;
+				}
+				System.out.println("1부터 " + num + "까지의 합 : " + sum);
+				break;
+			} else {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
+			}
+				
+			
+		}
+		
+		/*
+		
 		System.out.print("1 이상의 정수 하나를 입력하세요 : ");
 		int num = sc.nextInt();
 		
@@ -186,7 +210,7 @@ public class A_For {
 		} else {
 			System.out.println("잘못 입력하셨습니다.");
 		}
-		
+		*/
 		
 	}
 	
