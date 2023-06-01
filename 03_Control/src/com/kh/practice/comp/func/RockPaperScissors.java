@@ -101,6 +101,7 @@ public class RockPaperScissors {
 				}
 				
 				System.out.println(result);
+				System.out.println();
 				
 			} else if(input.equals("exit")) {
 				System.out.printf("%d전 %d승 %d무 %d패", sum, win, same, lose);

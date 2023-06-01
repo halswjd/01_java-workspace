@@ -213,9 +213,9 @@ public final class LoopPractice {
 		System.out.print("공차 : ");
 		int num2 = sc.nextInt();
 		
-		for(int i=num1; i<=(10+num1); i++) {
-			
-				System.out.print(i + " ");
+		
+		for(int i=num1; i<num1+num2*10 ; i+=num2) {
+			System.out.print(i + " ");
 		}
 	}
 	
@@ -305,6 +305,7 @@ public final class LoopPractice {
 			System.out.println();
 		}
 	}
-		
+	
+	
 }
 
