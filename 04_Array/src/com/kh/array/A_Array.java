@@ -110,7 +110,7 @@ public class A_Array {
 		 * 실제 리터럴(값)을 곧바로 담을 수 있는 변수를 일반 변수라고 얘기하고
 		 * 주소값을 담고 있는 변수는 참조변수(레퍼런스 변수)라고 한다. -> String이 여기 해당
 		 * 
-		 * 기본자료형(boolean, char, byte, short, int, long, float, double)으로 선언된 변수 : 소문자로 시작하고 소문자로 끝난ㅁ
+		 * 기본자료형(boolean, char, byte, short, int, long, float, double)으로 선언된 변수 : 소문자로 시작하고 소문자로 끝남
 		 * => 실제 리터럴값을 바로 담는 변수 = > 그냥 일반변수!
 		 * 
 		 * 그 외 자료형(int[]. double[], char[], short[], 이런 자료형, String, ...)

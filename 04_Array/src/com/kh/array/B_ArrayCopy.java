@@ -59,7 +59,7 @@ public class B_ArrayCopy {
 		System.out.println("origin 주소값 : " + origin.hashCode());
 		System.out.println("copy 주소값 : " + copy.hashCode());
 		
-		// 복사를 한다해서 heap 공간에 배열공간이 복사된것이 아니라 stack에 있던 origin의 주소값이 
+		// 복사를 한다해서 heap 공간에 배열공간이 복사된것이 아니라 stack에 int배열형만 생기고 같은 주소값이 복사되어 heap공간의 같은곳을 참조함
 		// 얕은 복사 : 주소값을 복사
 		
 	}
