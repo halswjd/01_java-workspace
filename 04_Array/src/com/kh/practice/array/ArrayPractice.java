@@ -1,5 +1,6 @@
 package com.kh.practice.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -158,12 +159,11 @@ public class ArrayPractice {
 			boolean result = str.equals(arr[i]);
 			if(result) {
 				System.out.println(arr[i] + "치킨 배달가능");
-				break;
+				return;
 			}else {
-				System.out.println(str + "치킨은 없는 메뉴입니다.");
-				break;
+				continue;
 			}
-		}
+		} System.out.println(str + "치킨 없음");
 		
 	}
 	
@@ -215,7 +215,7 @@ public class ArrayPractice {
 		System.out.println();
 		
 		int max = 0;
-		int min = 1;
+		int min = 10;
 		
 		for(int i=0; i<10; i++) {
 			if(max<arr[i]) {
@@ -235,51 +235,75 @@ public class ArrayPractice {
 		int[] arr = new int[10];
 		
 		for(int i=0; i<10; i++) {
-			for(int j=0; j<=i; j++) {
-				arr[i] = (int)(Math.random()*10+1);
-				boolean a = arr[j] == arr[i];
-				if(a) {
+			arr[i] = (int)(Math.random()*10+1);
+			for(int j=0; j<i; j++) {
+				while(arr[i]==arr[j]) {
 					arr[i] = (int)(Math.random()*10+1);
-					break;
-				} else {
-					break;
+					j=0;
 				}
 			}
 		}
 		for(int i=0; i<10; i++) {
-			System.out.print(arr[i] + " ");
+		    System.out.print(arr[i] + " ");
+		}
+	}
+	
+	public void practice15() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+
+		char[] arr = new char[str.length()];
+		
+		for(int i=0; i<str.length(); i++) {
+			arr[i] = str.charAt(i);
 		}
 		
+		String sum = arr[0]+"";
 		
+		for(int i=1; i<arr.length; i++) {
+			boolean dup = false;
+			for(int j=0; j<i; j++) {
+				if(arr[j]==arr[i]) {
+					dup = true;
+				}
+			}
+			if(!dup) {
+				sum += arr[i];
+			}
+		}
+		char[] resultArr = new char[sum.length()];
+		String result = "";
+		
+		for(int i=0; i<sum.length(); i++) {
+			resultArr[i] = sum.charAt(i);
+			if(i==sum.length()-1) {
+				result += resultArr[i];
+				break;
+			}
+			result += resultArr[i] + ", ";
+		}
+		System.out.println("문자열에 있는 문자 : " + result);
+		System.out.println("문자 개수 : " + resultArr.length);
+	}
 	
-
+	public void practice16() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int num1 = sc.nextInt();
+		sc.nextLine();
+		
+		String[] arr = new String[num1];
 		
 	}
+	
 }
 	
 
 
-
-
-
-
-
-
-
-//		arr[0] = (int)(Math.random()*10+1);
-//		
-//		for(int i=1; i<10;i++) {
-//			
-//			while(true) {
-//				int random = (int)(Math.random()*10+1);
-//				for(int j=1; i<) {
-//					
-//				}
-//			}
-//		}
-//		for(int i=0; i<10; i++) {
-//			System.out.print(arr[i] + " ");
-//		}
 
 
 
