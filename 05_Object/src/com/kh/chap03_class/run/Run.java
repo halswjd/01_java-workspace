@@ -40,8 +40,8 @@ public class Run {
 		
 		System.out.println("==== 상품3 ====");
 		System.out.println("상품명 : " + earphone.getPname());
-		System.out.println("가격 : " + tablet. getPrice() + "만원");
-		System.out.println("브랜드 : " + tablet.getBrand());
+		System.out.println("가격 : " + earphone. getPrice() + "만원");
+		System.out.println("브랜드 : " + earphone.getBrand());
 	}
 
 }
