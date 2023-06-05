@@ -6,22 +6,24 @@ public class RockPaperScissors {
 	
 	public void rps() {
 		
+		// 선생님 코드
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("당신의 이름을 입력하세요 : ");
 		String name = sc.nextLine();
 		
 		int win = 0;
-		int lose = 0;
-		int same = 0;
-		int sum = 0;
+		int lose = 0; 
+		int same = 0; // int ti = 0;
+		int sum = 0; // int total = 0;
 		
 		while(true) {
 			
 			System.out.print("가위바위보 : ");
 			String input = sc.nextLine();
 			
-			if(!(input.equals("exit"))) {
+			if(!(input.equals("exit"))) { // 조건문을 가위바위보일 때만 if문 들어가게 수정필요
 				
 				int num = (int)(Math.random()*3+1);
 				String str = " ";
@@ -40,6 +42,7 @@ public class RockPaperScissors {
 				
 				System.out.println("컴퓨터 : " + str);
 				System.out.println(name + " : " + input);
+				// 선생님은 여기에 sum++ 입력
 				
 				String result = " ";
 				
@@ -107,7 +110,7 @@ public class RockPaperScissors {
 				System.out.printf("%d전 %d승 %d무 %d패", sum, win, same, lose);
 				break;
 			}
-			
+			// 잘못 입력한 경우 출력문
 			
 			
 			
@@ -116,5 +119,6 @@ public class RockPaperScissors {
 		
 		
 	}
+
 
 }
