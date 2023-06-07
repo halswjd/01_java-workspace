@@ -41,6 +41,8 @@ public class Student { // 나만의 자료형
 					// 필드명과 매개변수명이 동일한 시점에서는 해당 메소드 영역에서 만들어진 변수가 우선수위가 높음
 //		필드 name = 매개변수 name; 원함
 		this.name = name;
+//		this => Student 클래스의 주소값을 가져서 필드부를 바꿔줄수있다
+		
 	}
 	
 	public void setAge(int age) {
@@ -65,7 +67,7 @@ public class Student { // 나만의 자료형
 	// 우리가 썼던 public void에 void는 아무것도 반환을 안해준다는 뜻의 반환형
 	
 	public String getName() { // void가 아니고 어떤 자료형을 던져줄지 써야함
-		return name;
+		return name; 	// 해당 메소드 영역에 변수가 없으므로 name에 this 불필요
 		
 	}
 	public int getAge() {
@@ -85,6 +87,7 @@ public class Student { // 나만의 자료형
 		
 	}
 	
+	// set 은 값을 넣어야하기때문에 매개변수가 필요, get은 출력을 해야하기때문에 반환형이 필요
 }
 
 

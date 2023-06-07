@@ -25,7 +25,7 @@ public class EncapsulationRun {
 		
 		Student moon = new Student();
 		
-//		moon.name = "문동은"; 직접접근 불가
+//		moon.name = "문동은"; 접근제한자가 private -> 직접접근 불가
 		
 		moon.setName("문동은"); // 필드부에는 직접접근이 안돼서 메소드를 통해 값 저장
 		moon.setAge(20);
@@ -47,5 +47,8 @@ public class EncapsulationRun {
 		System.out.println(moon.getAge()); // 25 출력
 		
 	}
+	
+	
+	
 
 }
