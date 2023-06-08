@@ -14,7 +14,6 @@ public class ProductTest {
 		
 		Product c = new Product("ktsnot3", "KT스마트폰3", "서울시 강남", 250000, 0.3);
 		
-		
 		// 객체가 가진 필드 값 출력 확인
 		System.out.println(a.information());
 		System.out.println(b.information());
@@ -23,10 +22,14 @@ public class ProductTest {
 		System.out.println("=========================================");
 		
 		// 각 객체의 가격을 모두 120만원으로 변경 / 부가세율도 모두 0.05로 변경
+		// 가격
+		int price = 1200000; // 변수 활용 가능(선생님코드)
 		a.setPrice(1200000);
 		b.setPrice(1200000);
 		c.setPrice(1200000);
 		
+		// 부가세
+		double tax = 0.05;
 		a.setTax(0.05);
 		b.setTax(0.05);
 		c.setTax(0.05);
@@ -48,7 +51,7 @@ public class ProductTest {
 		System.out.println("부가세 포함 가격 : " + (int)(b.getPrice()*b.getTax() + b.getPrice()) + "원");
 		
 		System.out.println("상품명 : " + c.getProductName());
-		System.out.println("부가세 포함 가격 : " + (c.getPrice()*c.getTax() + c.getPrice()) + "원");
+		System.out.println("부가세 포함 가격 : " + (int)(c.getPrice()*c.getTax() + c.getPrice()) + "원");
 		
 		// ** 실제가격 = 가격 + (가격 * 부가세율)
 		

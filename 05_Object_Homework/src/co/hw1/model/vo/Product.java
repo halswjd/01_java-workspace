@@ -2,18 +2,20 @@ package co.hw1.model.vo;
 
 public class Product {
 
-	private String productId;
-	private String productName;
-	private String productArea;
-	private int price;
-	private double tax;
+	// 필드부
+	private String productId;		// 상품아이디
+	private String productName;		// 상품명
+	private String productArea;		// 생산지
+	private int price;				// 가격
+	private double tax;				// 부가세
 	
 	
-	public Product() {
+	// 생성자부 (기본 + 전체)
+	public Product() { // 기본생성자
 		
 	}
 	
-	public Product(String productId, String productName, String productArea, int price, double tax) {
+	public Product(String productId, String productName, String productArea, int price, double tax) { // 전체 생성자
 		this.productId = productId;
 		this.productName = productName;
 		this.productArea = productArea;
@@ -21,16 +23,18 @@ public class Product {
 		this.tax = tax;
 	}
 	
+	
+	// 메소드부 (get - set 한세트로 작성)
 	public String information() {
 		return productId + " " + productName + " " + productArea + " " + price + " " + tax;
 	}
 	
-//	public void setProductId(String productId) {
-//		this.productId = productId;
-//	}
-//	public String getProducId() {
-//		return productId;
-//	}
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+	public String getProducId() {
+		return productId;
+	}
 	
 	
 	public void setProductName(String productName) {
@@ -41,12 +45,12 @@ public class Product {
 	}
 	
 	
-//	public void setProductArea(String productArea) {
-//		this.productArea = productArea;
-//	}
-//	public String getProductArea() {
-//		return productArea;
-//	}
+	public void setProductArea(String productArea) {
+		this.productArea = productArea;
+	}
+	public String getProductArea() {
+		return productArea;
+	}
 	
 	
 	public void setPrice(int price) {
