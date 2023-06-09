@@ -30,6 +30,7 @@ public class Employee {
 	}
 	
 	public Employee(int empNo, String empName, String dept, String job, int age, char gender, int salay, double bonusPoint, String phone, String address) {
+//		this(~~) 
 		this.empNo = empNo;
 		this.empName = empName;
 		this.dept = dept;
