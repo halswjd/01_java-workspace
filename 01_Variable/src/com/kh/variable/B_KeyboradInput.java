@@ -82,7 +82,7 @@ public class B_KeyboradInput {
 		 
 		 System.out.println(name + "님은 " + age + "살이며, 사는 곳은 " + address + "이고, 키는 " + height + "cm입니다.");
 		 System.out.printf("%s님은 %d살이며, 사는 곳은 %s이고, 키는 %.1fcm입니다.", name, age, address, height);
-		 // nextLine(); 메소드 제외 다른 메소드는 버퍼에서의 /n(개행문자)를 제거하지 않음, 그대로 버퍼에 /n 남아있기때문에 이 개행문자가 메모리로 넘어가 값을 이미 입력한것처럼 넘어가짐
+		 // nextLine(); 메소드 제외 다른 메소드는 버퍼에서의 \n(개행문자)를 제거하지 않음, 그대로 버퍼에 /n 남아있기때문에 이 개행문자가 메모리로 넘어가 값을 이미 입력한것처럼 넘어가짐
 		 // 그래서 주소 입력 전에 개행문자 제거 필요가 있음 -> nextLine(); 메소드 이용
 		 
 		 

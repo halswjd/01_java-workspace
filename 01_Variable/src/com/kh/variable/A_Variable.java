@@ -15,7 +15,7 @@ public class A_Variable {
 		// 주지훈 : 0000원 형식으로 출력하고 싶다
 		
 		System.out.println("차은우 : "+(9620*6*8)+"원");
-		System.out.println("주지훈 : "+(9620*6*8)+"원"); // ctrl alt 아래방향기 : 복사
+		System.out.println("주지훈 : "+(9620*6*8)+"원"); // ctrl alt 아래방향기 : 행 복사
 		System.out.println("이제훈 : "+(9620*6*8)+"원");
 		
 		
