@@ -20,7 +20,7 @@ public class Run {
 		
 		// 위의 학생 정보 모두 출력
 		for(int i=0; i<s.length; i++) {
-			System.out.println(s[i].toString());
+			System.out.println(s[i]/*.toString()*/);
 		}
 		System.out.println("=====================================================");
 		
@@ -33,7 +33,7 @@ public class Run {
 		Scanner sc = new Scanner(System.in);
 		int count = 0;
 		
-		while(true) {
+		while(true) { // 선생님은 count 변수와 while문만을 이용하여 객체 생성
 			
 			for(int i=0; i<emp.length; i++) {
 				System.out.print("이름 : ");
