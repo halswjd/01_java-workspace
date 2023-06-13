@@ -32,7 +32,7 @@ public class ElectronicRun {
 		// 노트북이라는 객체를 생성해서 넘기는 메소드
 		es.insert(new NoteBook("LG", "그램", 2000000, 4));
 		
-		// 태블릿이라는 개체를 생성해서 넘기는 메소드
+		// 태블릿이라는 객체를 생성해서 넘기는 메소드
 		es.insert(new Tablet("애플", "아이패드", 800000, false));
 		
 		// 가게에 해당 객체들이 잘 생성돼잇는지를 확인해보자
