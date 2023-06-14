@@ -19,13 +19,12 @@ public class TokenMenu {
 			System.out.print("메뉴 번호 : ");
 			int num = sc.nextInt();
 
-			TokenMenu tm = new TokenMenu();
 
 			if (num == 1) {
-				tm.tokenMenu();
+				tokenMenu();
 				continue;
 			} else if (num == 2) {
-				tm.inputMenu();
+				inputMenu();
 				continue;
 			}
 
@@ -48,11 +47,12 @@ public class TokenMenu {
 		// 토큰 처리 후 글자, 토큰 처리 후 개수, 모두 대문자로 변환 한 것을 출력
 		System.out.print("토큰 처리 전 글자 : ");
 		String str = sc.nextLine();
+		String s = tc.afterToken(str);
 		System.out.println("토큰 처리 전 개수 : " + str.length());
-		System.out.println("토큰 처리 후 글자 : " + tc.afterToken(str));
-		System.out.println("토큰 처리 후 개수 : " + tc.afterToken(str).length());
+		System.out.println("토큰 처리 후 글자 : " + s);
+		System.out.println("토큰 처리 후 개수 : " + s.length());
 
-		System.out.println("모두 대문자로 변환 : " + tc.afterToken(str).toUpperCase());
+		System.out.println("모두 대문자로 변환 : " + s.toUpperCase());
 	}
 
 	public void inputMenu() {

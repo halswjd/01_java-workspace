@@ -47,7 +47,7 @@ public class ArrayForEach {
 			total += p.getPrice();
 		}
 		System.out.println("총합계 : " + total);
-		System.out.println("평균가걱 : " + total / phones.length + "원");
+		System.out.println("평균가격 : " + total / phones.length + "원");
 		
 		
 		// 구매하고자 하는 핸드폰 입력 받고

@@ -38,6 +38,7 @@ public class BasicRun {
 		
 		mom.eat();
 		baby.eat();
+		System.out.println("==" + mom.toString());
 		
 		mom.sleep();
 		baby.sleep();

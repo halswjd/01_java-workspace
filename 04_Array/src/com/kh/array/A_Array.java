@@ -398,7 +398,7 @@ public class A_Array {
 		
 		int[] arr = new int[size];
 		
-		// 2. 반복문 활용해서 0 ~ 마지막 인덱스까지 매번 1 ~ 100 사이의 랜덤값 발생시켜 대입
+		// 2. 반복 문 활용해서 0 ~ 마지막 인덱스까지 매번 1 ~ 100 사이의 랜덤값 발생시켜 대입
 		
 		for(int i=0; i<size; i++) {
 			arr[i] = (int)(Math.random()*100+1);

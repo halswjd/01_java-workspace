@@ -27,8 +27,8 @@ public class ObjectArrayRun {
 			
 			books[i] = new Book(title, author, price, publisher);
 		} // for문 끝
-		
 		// 객체 생성 끝
+		
 		/*
 		System.out.println(books[0].information());
 		System.out.println(books[1].information());
