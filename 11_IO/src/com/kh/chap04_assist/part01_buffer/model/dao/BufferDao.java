@@ -24,7 +24,7 @@ public class BufferDao {
 		
 		// BufferdWriter : 버퍼라는 공간을 제공해주는 보조스트림 (속도향상) : 기반스트림이랑 이름 맞춰야함
 		
-//		BufferedWriter bw = new BufferedWriter("c_buffer.txt"); 기반스트림없이 단독 사용 불감
+//		BufferedWriter bw = new BufferedWriter("c_buffer.txt"); 기반스트림없이 단독 사용 불가
 		
 		// 1. 기반스트림 먼저 생성
 //		FileWriter fw = new FileWriter("c_buffer.txt");

@@ -42,7 +42,6 @@ public class FileCharDao {
 			fw.write(arr);
 			
 		} catch (IOException e) {
-			
 			e.printStackTrace();
 		} finally {
 			try {
@@ -71,7 +70,7 @@ public class FileCharDao {
 			while((value = fr.read()) != -1) {
 				System.out.print((char)value); // println구문은 개행이되어서 print문으로 출력
 			}
-			
+		
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

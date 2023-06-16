@@ -42,6 +42,7 @@ public class ObjectDao {
 	public void fileRead() {
 		
 		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d_phone.txt"))) {
+			
 			/*
 			System.out.println(ois.readObject());
 			System.out.println(ois.readObject());
@@ -55,8 +56,8 @@ public class ObjectDao {
 			}
 			
 		} catch(EOFException e) { // 자식클래스라 위에 위치
-//			e.printStackTrace();
-		}catch (IOException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

@@ -49,7 +49,7 @@ public class FileRun {
 			File folder = new File("parent");
 			folder.mkdir();
 			File file = new File("parent\\person.txt"); // 상대경로
-			file.createNewFile();
+			file.createNewFile();  // 메소드까지 실행해야먄 실제 파일이 만들어짐
 			
 			System.out.println("파일명 : " + file.getName()); // pserson.txt
 			System.out.println("절대경로 : " + file.getAbsolutePath()); // C:\01_java-workspace\11_IO\parent\person.txt => 절대경로
@@ -57,7 +57,7 @@ public class FileRun {
 			System.out.println("상위폴더 : " + file.getParent()); // parent
 			
 		} catch (IOException e) { // UncheckedException
-			e.printStackTrace();  // 메소드까지 실행해야먄 실제 파일이 만들어짐
+			e.printStackTrace(); 
 		}
 	} 
 	
@@ -75,7 +75,7 @@ public class FileRun {
 	 * * 스트림의 구분
 	 * > 통로의 사이즈(1byte 짜리 / 2byte 짜리)
 	 * - 바이트 스트림 : 1byte짜리만 왔다갔다 할 수 있을 정도의 사이즈 (좁은통로) => 입력(InputStream) / 출력(OutputStream)
-	 * - 문자 스트림 : 2byte짜리도 았다갔다 할 수 있을 정도의 사이즈 => 입력(Reader) / 출력(Writer)
+	 * - 문자 스트림 : 2byte짜리도 왔다갔다 할 수 있을 정도의 사이즈 => 입력(Reader) / 출력(Writer)
 	 *  
 	 * > 외부매체에 직접 연결하는 유무
 	 * - 기반 스트림 : 외부매체와 직접적으로 연결되는 통로 (필수)
