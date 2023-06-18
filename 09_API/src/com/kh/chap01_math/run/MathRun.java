@@ -34,7 +34,7 @@ public class MathRun {
 		// 제곱 : pow
 		System.out.println("2의 10제곱 : " + Math.pow(2, 10));
 		
-//		Math m = new Math(); Math클래스에 기본생성자가 private 안됨
+//		Math m = new Math(); Math클래스에 기본생성자가 private => 안됨
 		
 		/*
 		 * Math 특징

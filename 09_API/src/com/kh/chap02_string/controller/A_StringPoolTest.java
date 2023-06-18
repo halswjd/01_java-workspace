@@ -40,7 +40,7 @@ public class A_StringPoolTest {
 		String str1 = "hello";
 		String str2 = "hello";
 		// String Pool 특징 : 동일한 문자열을 가질 수 없음(중복 허용X)
-		// 리터럴값은 String Pool에 담김 다른 String의 변수가 생길 때 그 리터럴값이 StringPool에 있는지 확인함
+		// 리터럴값은 String Pool에 담김, 다른 String의 변수가 생길 때 그 리터럴값이 StringPool에 있는지 확인함
 		
 		System.out.println(str1/*.toSting*/);
 		System.out.println(str2);
