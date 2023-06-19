@@ -29,6 +29,18 @@ public class Run {
 		 String newPrice = sc.nextLine();
 		 
 		 // 2_2. 입력받은 값들을 BookController의 insertBook() 메소드로 전달
-	}
+		 bc.insertBook(newTitle, newAuthor, newPublisher, newDate, newPrice);
+		 
+		// 3. 5번째 도서 출간일 출력
+		 System.out.println("---------3. 6번째 도서 출간일 출력---------");
+		 bc.printBookPublishDate();
+		 
+		// 4. 검색할 도서명 입력 (키워드)
+		 System.out.print("검색할 도서명을 입력하시오 : ");
+		 String searchTitle = sc.nextLine();
+		 bc.searchBook(searchTitle);
 
+		}
 }
+
+
