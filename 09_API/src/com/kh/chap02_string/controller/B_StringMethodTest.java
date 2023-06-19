@@ -10,7 +10,7 @@ public class B_StringMethodTest {
 		// 메소드명(매개변수) : 반환형
 		
 		// 1. 문자열.charAt(int index) : char
-		//	  문자열에서 전달받인 index 위치의 문자만을 추출해서 리턴
+		//	  문자열에서 전달받은 index 위치의 문자만을 추출해서 리턴
 		char ch = str1.charAt(3);
 		System.out.println(ch); // 'l' 출력
 		
@@ -96,7 +96,6 @@ public class B_StringMethodTest {
 		
 		// 11. String.valueOf(char[] data) : String
 		System.out.println(String.valueOf(arr)); // 'Hello World' 출력
-				
 				
 		
 		

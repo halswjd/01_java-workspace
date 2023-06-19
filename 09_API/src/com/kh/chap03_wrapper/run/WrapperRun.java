@@ -58,7 +58,7 @@ public class WrapperRun {
 		// 객체생성을 통해서 반드시 변환해야되는 경우 => 문자열을 Integer 타입으로
 //		Integer i4 = "123";
 		Integer i4 = new Integer("123"); // 매개변수는 꼭 숫자만 줘야함
-		System.out.println(i4); // 123 출력
+		System.out.println("i4 : " + i4); // 123 출력
 		
 		// UnBoxing : Wrapper 클래스 자료형 ---> 기본자료형
 		
@@ -90,7 +90,7 @@ public class WrapperRun {
 		// 2. 기본자료형 ---> String
 		// 		10			"10"
 		// 		15			"15.3"
-		//	String클래ㅡ에서 제공하는 String.valueOf() 메소드 이용
+		//	String클래스에서 제공하는 String.valueOf() 메소드 이용
 		
 		String strI = String.valueOf(i);
 		String strD = String.valueOf(d);

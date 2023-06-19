@@ -36,7 +36,7 @@ public class DateRun {
 		String formatDate = sdf.format(date1);
 		System.out.println(formatDate);
 		
-		Date d = new Date(2023,06,15);
+		Date d = new Date(2023-1900,06-1,15);
 		
 		SimpleDateFormat f = new SimpleDateFormat("yyyy년 MM월 dd일");
 		String fd = f.format(d);

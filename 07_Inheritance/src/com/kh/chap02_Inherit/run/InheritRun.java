@@ -1,8 +1,11 @@
 package com.kh.chap02_Inherit.run;
 
+import java.util.ArrayList;
+
 import com.kh.chap02_Inherit.model.vo.Airplane;
 import com.kh.chap02_Inherit.model.vo.Car;
 import com.kh.chap02_Inherit.model.vo.Ship;
+import com.kh.chap02_Inherit.model.vo.Vehicle;
 
 public class InheritRun /*extends Object*/ {
 
@@ -19,6 +22,20 @@ public class InheritRun /*extends Object*/ {
 		c.howToMove();
 		s.howToMove();
 		a.howToMove();
+		
+		System.out.println("======================================================");
+		
+		ArrayList<Vehicle> list = new ArrayList<>();
+		
+		list.add(new Car("벤틀리", 12.5, "세단", 4)); // 다형성 적용
+		list.add(new Ship("낚시배", 3, "어선", 1));
+		list.add(new Airplane("종이비행기", 0.01, "제트기", 14));
+		
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i).information());// 동적바인딩
+		}
+		
+		System.out.println("======================================================");
 		
 		/*
 		 * < 상속 장점 >
