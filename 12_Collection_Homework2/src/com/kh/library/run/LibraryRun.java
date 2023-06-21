@@ -173,7 +173,7 @@ public class LibraryRun {
 				} else if (search == 4) { // 4. 출판사로 책 찾기
 					System.out.print("출판사를 입력하세요 : ");
 					publisher = sc.nextLine();
-					//bc.searchBookByPublisher()
+//					ArrayList bc.searchBookByPublisher(publisher);
 				} else if (search == 5) { // 5. 특정 가격 밑으로 책 찾기
 					System.out.print("가격을 입력하세요 : ");
 					price = sc.nextInt();
