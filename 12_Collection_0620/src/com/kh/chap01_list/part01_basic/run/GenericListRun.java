@@ -32,6 +32,7 @@ public class GenericListRun {
 			System.out.println(o);
 		}
 		
+		
 		/*
 		 * 제네릭<> 을 사용하는 이유
 		 * 1. 명시된 타입의 객체만 저장하도록 제한을 둘 수 있음 

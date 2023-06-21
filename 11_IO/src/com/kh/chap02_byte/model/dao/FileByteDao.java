@@ -17,7 +17,7 @@ public class FileByteDao {
 	 * XXXOutputStream : XXX 매체로부터 데이터를 출력하는 통로 (외부매체로부터 데이터를 내보내겠다. 쓰겠다)
 	 * 
 	 */
-	
+
 	// 프로그램 (자바 또는 메모리) -------> 외부매체(파일) (출력 : 프로그램 상의 데이터를 파일로 내보내기, 즉 파일로 저장)
 	public void fileSave() {
 		
@@ -50,7 +50,7 @@ public class FileByteDao {
 			fout.write(arr); // cde 문자 저장
 			
 			// fout.write(byte[] b, int off, int len); : byte 배열의 off 인덱스부터 len개수 만큼 출력
-			fout.write(arr, 1, 2); // de 문자 저장
+			fout.write(arr, 1, 2); // de 문자 저
 			
 			// 3. 스트림 이용했으면 반납하기(필수)
 //			fout.close(); 위에서 write() 메소드 실행시 IOException 발생했을 경우 => catch 블럭 실행 후 빠져나감 => 반납하는 코드는 실행안됨!

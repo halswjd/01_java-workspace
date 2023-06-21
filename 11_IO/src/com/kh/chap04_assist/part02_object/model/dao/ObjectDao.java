@@ -1,4 +1,4 @@
-package com.kh.chap04_assist.part02_object.model.dao;
+  package com.kh.chap04_assist.part02_object.model.dao;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
