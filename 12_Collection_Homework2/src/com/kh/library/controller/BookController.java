@@ -64,50 +64,68 @@ public class BookController implements BookManager  {
 
 	@Override
 	public ArrayList<Book> onlySearchMagazine() {
-		ArrayList<Book> mList = new ArrayList<Book>();
+		ArrayList<Book> searchList = new ArrayList<Book>();
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i) instanceof Magazine) {
-				mList.add(list.get(i));
+				searchList.add(list.get(i));
 			}
 		}
 		
-		return mList;
+		return searchList;
 		
 	}
 
 	@Override
 	public ArrayList<Book> magazineOfThisYearInfo(int year) {
-		ArrayList<Book> yList = new ArrayList<Book>();
+		ArrayList<Book> searchList = new ArrayList<Book>();
 		
 		for(int i=0; i<list.size(); i++) {
 			if(list.get(i) instanceof Magazine) {
 				if(((Magazine)list.get(i)).getYear() == year) {
-					yList.add(list.get(i));
+					searchList.add(list.get(i));
 				}
 			}
 		}
 		
-		return yList;
+		return searchList;
 	}
 
 	@Override
 	public ArrayList<Book> searchBookByPublisher(String publisher) {
-		return null;
+		ArrayList<Book> searchList = new ArrayList<Book>();
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(i).getPublisher().contains(publisher)) {
+				searchList.add(list.get(i));
+			}
+		}
+		return searchList;
 	}
 
 	@Override
 	public ArrayList<Book> searchBookByPrice(int price) {
-		return null;
+		
+		ArrayList<Book> searchList = new ArrayList<Book>();
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(i).getPrice() < price) {
+				searchList.add(list.get(i));
+			}
+		}
+		
+		return searchList;
 	}
 
 	@Override
 	public int getTotalPrice() {
-		return 0;
+		int sum = 0;
+		for(Book b : list) {
+			sum += b.getPrice();
+		}
+		return sum;
 	}
 
 	@Override
 	public int getAvgPrice() {
-		return 0;
+		return getTotalPrice()/list.size();
 	}
 	
 

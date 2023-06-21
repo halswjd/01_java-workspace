@@ -69,7 +69,7 @@ public class LibraryRun {
 				sc.nextLine();
 
 				System.out.print("메뉴번호를 입력해주세요 : ");
-				sc.nextLine();
+//				sc.nextLine();
 				int search = sc.nextInt();
 				
 				if (search == 1) {
@@ -122,14 +122,25 @@ public class LibraryRun {
 				System.out.print("일반도서이면 true, 잡지이면 false를 입력하세요 : ");
 				Boolean bkOrMaga = sc.nextBoolean();
 				
-				if (bkOrMaga.equals(true)) {
+				int num = 0;
+				for(int i=0; i<bs.size(); i++) {
+					if(bs.get(i).getbNo().equals(bNo)) {
+						num = 1;
+						System.out.println("이미 소장하고있는 도서입니다.");
+						break;
+					}
+				}
+					
+				if (bkOrMaga.equals(true) && num == 0) {
 					bc.addBook(new Book(bNo, title, author, publisher, price, description));
-				} else if (bkOrMaga.equals(false)) {
+					System.out.println("추가성공!");
+				} else if (bkOrMaga.equals(false) && num ==0 ) {
 					System.out.print("출간연도를 입력하세요 : ");
 					int year = sc.nextInt();
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
 					bc.addBook(new Magazine(bNo, title, author, publisher, price, description, year, month));
+					System.out.println("추가성공!");
 				}
 
 				break;
@@ -156,7 +167,7 @@ public class LibraryRun {
 					
 				} else if (search == 2) { // 책 제목으로 책 찾기
 					System.out.print("책 제목을 입력하세요 : ");
-//					sc.nextLine();
+					//sc.nextLine();
 					title = sc.nextLine();
 					ArrayList<Book> list = bc.searchBookByTitle(title);
 					for(Book b : list) {
@@ -173,12 +184,18 @@ public class LibraryRun {
 				} else if (search == 4) { // 4. 출판사로 책 찾기
 					System.out.print("출판사를 입력하세요 : ");
 					publisher = sc.nextLine();
-//					ArrayList bc.searchBookByPublisher(publisher);
+					ArrayList<Book> list = bc.searchBookByPublisher(publisher);
+					for(Book b : list) {
+						System.out.println(b);
+					}
 				} else if (search == 5) { // 5. 특정 가격 밑으로 책 찾기
 					System.out.print("가격을 입력하세요 : ");
 					price = sc.nextInt();
 					sc.nextLine();
-					//bc.searchBookByPrice()
+					ArrayList<Book> list = bc.searchBookByPrice(price);
+					for(Book b : list) {
+						System.out.println(b);
+					}
 				} else if (search == 6)
 					flag = true; // 6. 이전으로
 				else
@@ -187,8 +204,8 @@ public class LibraryRun {
 				break;
 				
 			case 4:// 4. 전체책 가격 합계 및 평균 조회
-				System.out.println("전체책 가격 합계 : " );
-				System.out.println("전체책 가격 평균 : " );
+				System.out.println("전체책 가격 합계 : " + bc.getTotalPrice() + "원");
+				System.out.println("전체책 가격 평균 : " + bc.getAvgPrice() + "원");
 				break;
 				
 			case 5: 
