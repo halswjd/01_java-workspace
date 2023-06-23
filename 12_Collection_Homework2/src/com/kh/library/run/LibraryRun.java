@@ -8,6 +8,7 @@ import com.kh.library.model.vo.Book;
 import com.kh.library.model.vo.Magazine;
 
 public class LibraryRun {
+	
 
 	public static void main(String[] args) {// 소장책 DB
 		ArrayList<Book> bList = new ArrayList<>();
@@ -130,7 +131,8 @@ public class LibraryRun {
 						break;
 					}
 				}
-					
+
+				
 				if (bkOrMaga.equals(true) && num == 0) {
 					bc.addBook(new Book(bNo, title, author, publisher, price, description));
 					System.out.println("추가성공!");
@@ -142,6 +144,8 @@ public class LibraryRun {
 					bc.addBook(new Magazine(bNo, title, author, publisher, price, description, year, month));
 					System.out.println("추가성공!");
 				}
+				
+				// 선생님 코드 => 메소드 이용해서 중복 체크
 
 				break;
 				
@@ -178,6 +182,9 @@ public class LibraryRun {
 					System.out.print("출간연도를 입력하세요 : (올해 --> 2022) : ");
 					int year = sc.nextInt();
 					ArrayList<Book> list = bc.magazineOfThisYearInfo(year);
+					if(list == null) {
+						System.out.println("조회된 도서가 없습니다");
+					}
 					for(Book b : list) {
 						System.out.println(b);
 					}
