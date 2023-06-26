@@ -8,6 +8,7 @@ import com.kh.library.model.vo.Book;
 import com.kh.library.model.vo.Magazine;
 
 public class LibraryRun {
+	
 
 	public static void main(String[] args) {// 소장책 DB
 		ArrayList<Book> bList = new ArrayList<>();
@@ -130,7 +131,8 @@ public class LibraryRun {
 						break;
 					}
 				}
-					
+
+				
 				if (bkOrMaga.equals(true) && num == 0) {
 					bc.addBook(new Book(bNo, title, author, publisher, price, description));
 					System.out.println("추가성공!");
@@ -140,8 +142,10 @@ public class LibraryRun {
 					System.out.print("출간월을 입력하세요 : ");
 					int month = sc.nextInt();
 					bc.addBook(new Magazine(bNo, title, author, publisher, price, description, year, month));
-					System.out.println("추가성공!");
+					System.out.println("성공적으로 일반도서가 추가되었습니다!");
 				}
+				
+				// 선생님 코드 => 메소드 이용해서 중복 체크
 
 				break;
 				
@@ -163,13 +167,20 @@ public class LibraryRun {
 				if (search == 1) { // bNo으로 책 찾기
 					System.out.print("bNo을 입력하세요 : ");
 					bNo = sc.nextLine();
-					System.out.println(bc.searchBookBybNo(bNo));
+					if(bc.searchBookBybNo(bNo)==null) {
+						System.out.println("조회된 도서가 없습니다.");
+					} else {
+						System.out.println(bc.searchBookBybNo(bNo));
+					}
 					
 				} else if (search == 2) { // 책 제목으로 책 찾기
 					System.out.print("책 제목을 입력하세요 : ");
 					//sc.nextLine();
 					title = sc.nextLine();
 					ArrayList<Book> list = bc.searchBookByTitle(title);
+					if(list.size()==0) {
+						System.out.println("조회된 도서가 없습니다.");
+					}
 					for(Book b : list) {
 						System.out.println(b);
 					}
@@ -178,6 +189,14 @@ public class LibraryRun {
 					System.out.print("출간연도를 입력하세요 : (올해 --> 2022) : ");
 					int year = sc.nextInt();
 					ArrayList<Book> list = bc.magazineOfThisYearInfo(year);
+<<<<<<< HEAD
+					if(list.size()==0) {
+						System.out.println("조회된 도서가 없습니다.");
+=======
+					if(list == null) {
+						System.out.println("조회된 도서가 없습니다");
+>>>>>>> f4463ba1e3731052396a17970c915eadcfcbe160
+					}
 					for(Book b : list) {
 						System.out.println(b);
 					}
@@ -185,6 +204,9 @@ public class LibraryRun {
 					System.out.print("출판사를 입력하세요 : ");
 					publisher = sc.nextLine();
 					ArrayList<Book> list = bc.searchBookByPublisher(publisher);
+					if(list.size()==0) {
+						System.out.println("조회된 도서가 없습니다.");
+					}
 					for(Book b : list) {
 						System.out.println(b);
 					}
@@ -193,6 +215,9 @@ public class LibraryRun {
 					price = sc.nextInt();
 					sc.nextLine();
 					ArrayList<Book> list = bc.searchBookByPrice(price);
+					if(list.size()==0) {
+						System.out.println("조회된 도서가 없습니다.");
+					}
 					for(Book b : list) {
 						System.out.println(b);
 					}
