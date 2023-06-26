@@ -21,7 +21,7 @@ public class BookController implements BookManager  {
 	}
 
 	@Override
-	public Book searchBookBybNo(String bNo) {
+	public Book searchBookBybNo(String bNo) { // 다른 search와 달리 bNo 결과는 한권만 나오기 때문에 반황형이 list가 아니라 객체 하나
 		
 		Book b = null;
 		
@@ -58,6 +58,8 @@ public class BookController implements BookManager  {
 				bList.add(list.get(i));
 			}
 		}
+		
+		// 선생님 코드 => for문으로 중복 체크하고 if문 continue로 증감만 되게 
 		
 		return bList;
 	}
