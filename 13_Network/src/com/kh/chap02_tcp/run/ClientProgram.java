@@ -29,7 +29,7 @@ public class ClientProgram {
 		
 		
 		try {
-			serverIP = "192.168.20.45";
+			serverIP = "192.168.0.2";
 			
 			// 1) 서버에 연결 요청 보내는 구문 (요청하고자 하는 서버의 IP주소와 지정된 포트번호를 제시하면서 소켓 객체 생성)
 			socket = new Socket(serverIP, port);

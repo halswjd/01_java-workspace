@@ -32,7 +32,7 @@ public class FileByteDao {
 			// 1. FileOutputStream 객체 생성 => 해당 파일과의 연결통로 만들어짐
 			fout = new FileOutputStream("a_byte.txt");
 //			fout = new FileOutputStream("a_byte.txt", /*false*/ true);
-			
+			 
 			/*
 			 * true 미작성시 => 해당 파일이 존재할 경우 기존의 데이터 덮어씌워짐 (기본값이 false)
 			 * true 작성시 => 해당 파일이 존재할 경우 기존의 데이터에 이어서 작성이 됨 (실행할때마다 데이터 저장됨)

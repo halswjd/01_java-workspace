@@ -56,7 +56,7 @@ public class ServerProgram {
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			// 출력용 스트림 (클라이언트에게 값을 한 줄 단위로 출력할 수 있는 출력용 스트림)
 			pw = new PrintWriter(socket.getOutputStream()); 
-			// PrintWriter : 데이터 출력 print(), println() 메소드 가지고 있는 보조스트림
+			// PrintWriter : 데이터 출력 print(),  println() 메소드 가지고 있는 보조스트림
 			
 			// 7) 스트림을 통해 읽고 쓰기
 			// 클라이언트로부터 전달된 메세지가 있을 경우 서버측에서 읽어들일거임! (입력)
