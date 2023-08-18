@@ -27,7 +27,7 @@ public class C_Printf {
 		System.out.println(iNum1 + iNum2); // 30 출력 -> int 끼리만 더해졌을때는 int 결과값이 나옴
 		System.out.printf("%d%d", iNum1, iNum2); // 1020 출력
 		System.out.printf("%d %d", iNum1, iNum2); // 10 20 출력
-		// System.out.printf("%d %d", iNum1); 형식에는 두개의 정수가 있지만 하나의 변수만 들어가서 에러
+//		 System.out.printf("%d %d", iNum1); 형식에는 두개의 정수가 있지만 하나의 변수만 들어가서 에러
 		System.out.printf("%d %d", iNum1, iNum2, iNum2); // 변수가 넘치게 들어가있는건 가능
 		
 		System.out.printf("%d%d", iNum1, iNum2);
@@ -35,7 +35,7 @@ public class C_Printf {
 		System.out.println("하하");
 		
 		// "10 20%" 출력
-		// System.out.printf("%d %d%", iNum1, iNum2); 에러 -> %뒤에는 원래 포맷키워드가 와야해서
+//		System.out.printf("%d %d%", iNum1, iNum2); //에러 -> %뒤에는 원래 포맷키워드가 와야해서
 		System.out.printf("%d %d%%", iNum1, iNum2); // 10 20% 출력
 		System.out.println();
 		
@@ -48,6 +48,7 @@ public class C_Printf {
 		System.out.printf("%5d\n", 3000);
 		System.out.printf("%5d\n", 16);
 		
+		System.out.println();
 		
 		double dNum1 = 1.23456789;
 		double dNum2 = 4.53;

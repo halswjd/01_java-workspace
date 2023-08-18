@@ -88,7 +88,7 @@ public class D_Cast {
 	 		int iNum = 10;
 	 		double dNum = 5.89;
 	 		
-	 		// int iSum = iNum + dNum;
+	 		int iSum = iNum + dNum;
 	 		// (iNum+dNum)을 double로 인식하기에 int자료형에 값을 담으려면 강제 형변환이 필요
 	 		
 	 		// 에러 해결 방법
